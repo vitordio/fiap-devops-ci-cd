@@ -16,7 +16,7 @@ phases:
     commands:
       - echo Pushing Docker image...
       - docker push 075824682740.dkr.ecr.us-east-1.amazonaws.com/fiap-cluster-devops-ci-cd:latest
-      # Criação do arquivo imagedefinitions.json para ser usado no deploy
+      # Criação dos arquivo imagedefinitions.json para ser usado no deploy
       - echo '[{"name":"fiap-cluster-devops-ci-cd","imageUri":"075824682740.dkr.ecr.us-east-1.amazonaws.com/fiap-cluster-devops-ci-cd:latest"}]' > imagedefinitions.json
 artifacts:
   files:
