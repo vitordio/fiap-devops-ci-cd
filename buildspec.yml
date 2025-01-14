@@ -10,12 +10,12 @@ phases:
   build:
     commands:
       - echo Building Docker image...
-      - docker build -t demo-app .
-      - docker tag demo-app:latest 075824682740.dkr.ecr.us-east-1.amazonaws.com/demo-app:latest
+      - docker build -t fiap-cluster-devops-ci-cd .
+      - docker tag fiap-cluster-devops-ci-cd:latest 075824682740.dkr.ecr.us-east-1.amazonaws.com/fiap-cluster-devops-ci-cd:latest
   post_build:
     commands:
       - echo Pushing Docker image...
-      - docker push 075824682740.dkr.ecr.us-east-1.amazonaws.com/demo-app:latest
+      - docker push 075824682740.dkr.ecr.us-east-1.amazonaws.com/fiap-cluster-devops-ci-cd:latest
 artifacts:
   files:
     - '**/*'
